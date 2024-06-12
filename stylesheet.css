@@ -1,0 +1,118 @@
+* {
+
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+html {
+    background-color: #566375;
+}
+.container {
+    background-color: #566375;
+    padding:2rem;
+    display: flex;
+    justify-content:center;
+}
+.background {
+    background-color: #262E41;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 1.5rem;
+    flex-direction: column;
+    border-radius: 20px;
+    position: relative;;
+}
+.background p {
+    font-size: 4rem;
+    color: white;
+    margin: 2rem 0rem;
+    max-width: 9ch;
+    overflow: hidden;
+}
+.buttons-grid button {
+    font-size: 2.5rem;
+    background-color: #262E41;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 4px 4px 10px #090f21d3,-1px -1px 10px #4c5364c8;
+    padding: 1.3rem;
+    color: #fff;
+    transition: all 0.1s ease;
+    opacity: 0.8;
+}
+.buttons-grid button:hover {
+    background-color: #151a27;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px #4c53645d ,-1px -1px 10px #090f21d3;
+}
+.buttons-grid button:active {
+    transform: scale(90%)
+}
+.color-yellow {
+    color: #AD885C !important;
+}
+.buttons-grid {
+    display: grid;
+    /* grid-template-areas: 
+    'AC +/- % /'
+    '7 8 9 X'
+    '4 5 6 -'
+    '1 2 3 +'
+    '0 0 . ='; */
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+}
+#zero {
+    grid-column: span 2;
+    text-align: left;
+    
+}
+.theme {
+    position: absolute;
+    left: 20px;
+    font-size: 1.5rem !important;
+    padding: 0.5rem !important;
+    border-radius: 50px !important;
+    border: none;
+    background-color: #262E41;
+    box-shadow: 3px 3px 10px #090f21d3,-1px -1px 10px #4c5364c8;
+}
+.theme:hover {
+    background-color: #151a27;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px #4c53645d ,-1px -1px 10px #090f21d3;
+}
+.theme:active {
+    transform: scale(90%)
+}
+@media screen and (max-width: 576px ) {
+    .background button {
+        font-size: 1.5rem;
+        padding: 1rem;
+        border-radius: 20px;
+
+    }
+    .container {
+        padding-top: 3rem;
+        
+
+
+    }
+    .buttons-grid {
+        gap: 0.7rem;
+    }
+    .background p {
+        font-size: 3rem;
+        color: white;
+        margin: 2rem 0rem;
+        max-width: 9ch;
+        overflow: hidden;
+    }
+    .theme {
+
+        left: 15px;
+        top:12px;
+    }
+}
